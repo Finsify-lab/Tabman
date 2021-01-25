@@ -255,6 +255,7 @@ open class TMBarView<Layout: TMBarLayout, Button: TMBarButton, Indicator: TMBarI
         rootContentStack.axis = .horizontal
         view.addSubview(rootContentStack)
         rootContentStack.translatesAutoresizingMaskIntoConstraints = false
+        rootContentStack.heightAnchor.constraint(equalToConstant: 44).isActive = true
         if #available(iOS 11, *) {
             constraints.append(contentsOf: [
                 rootContentStack.leadingAnchor.constraint(equalTo: view.safeAreaLeadingAnchor),
